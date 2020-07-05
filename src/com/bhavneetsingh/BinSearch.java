@@ -4,26 +4,39 @@ import java.util.ArrayList;
 
 public class BinSearch {
 
-    Integer Search_list_start(ArrayList<Integer> list,int date){
-        int low=0;
-        int high = (list.size())-1;
-        return Search_list_start(list,date,low,high);
-    };
+    Integer searchListStart(ArrayList<Integer> list,int date, int low, int high){
+        boolean startEnd = true;
+        return searchList(list,date,low,high,startEnd);
+    }
 
-    Integer Search_list_start(ArrayList<Integer> list,int date, int low, int high) {
-        //int low = low2.orElse(0);
-        //int high = high2.orElse((list.size()) - 1);
-        int mid;
+    Integer searchListEnd(ArrayList<Integer> list,int date, int low, int high){
+        boolean startEnd = false;
+        return searchList(list,date,low,high,startEnd);        
+    }
+
+    Integer searchList(ArrayList<Integer> list,int date, int low, int high,boolean startEnd) {
+        int mid;        
         int current;
+        // int highTemp = high;
+        // int lowTemp = low;
         while(low <= high){
             mid = (low+high)/2;
             current =list.get(mid);
-            if(date == current){
-                while((list.get(mid)).equals((list.get(mid-1)))){
-                    //System.out.println(list.get(PrevOut));
-                    mid--;
-                }
+            if(date == current){ 
+                if (startEnd){
+                    while((list.get(mid)).equals((list.get(mid-1)))){//insert &&(if(highTemp>=mid))
+                        //System.out.println(list.get(PrevOut));
+                        mid--;
+                    }
                 return mid+1;
+                }
+                else{
+                    while((list.get(mid)).equals((list.get(mid+1)))){
+                        //System.out.println(list.get(PrevOut));
+                        mid++;
+                    }
+                return mid+1;
+                }
             }
             else if(current > date){high = mid-1;}
             else{low = mid+1;}
@@ -31,32 +44,23 @@ public class BinSearch {
         return null;
     }
 
-    Integer Search_list_end(ArrayList<Integer> list,int low,int date){
-        //int low=0;
-        int high = (list.size())-1;
-        return Search_list_end(list,date,low,high);
-    };
+    // public static void main(String[] args) {
+    //     ArrayList<Integer> list = new ArrayList<Integer>();
+    //     list.add(1);
+    //     list.add(2);
+    //     list.add(4);
+    //     list.add(4);
+    //     list.add(4);
+    //     list.add(9);
+    //     list.add(9);
+    //     list.add(11);
+        
+    //     int date =  4;
 
-    Integer Search_list_end(ArrayList<Integer> list,int date, int low, int high){
-        //int low =0;
-        //int high=(list.size())-1;
-        int mid;
-        int current;
-        while(low <= high){
-            mid = (low+high)/2;
-            current =list.get(mid);
-            if(date == current){
-                while((list.get(mid)).equals((list.get(mid+1)))){
-                    //System.out.println(list.get(PrevOut));
-                    mid++;
-                }
-                return mid+1;
-            }
-            else if(current > date){high = mid-1;}
-            else{low = mid+1;}
-        }
-        return null;
-
-    }
-
+    //     BinSearch BS = new BinSearch();
+    //     System.out.println(BS.searchListStart(list,date,3,7));
+    //     //System.out.println(BS.searchListEnd(list,date,0,7));
+        
+    // }
 }
+
