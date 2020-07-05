@@ -1,0 +1,27 @@
+Example logline:2020-01-31T20:12:38.1234Z,Some Field,Other Field, And so on, Till new line,...n
+
+create test stub file
+Example logline:2020-01-31T20:12:38.1234Z,Some Field,Other Field, And so on, Till new line,...n
+LogExtractor.exe -f "From Time" -t "To Time" -i "Log file directory location"
+
+
+
+//run python script from cmd
+//accept time in iso 8601 format
+
+[
+//check for all files after -------date 
+{
+can use date for diving sheets since there may be multiple sheets
+considering sequential data
+
+or traversing through a loop to get date for 1st attempt
+traverering year that month than day maybe in op2
+and then diving files and trying to reach the right record
+by using divide/2 fashion
+}
+]
+
+
+less than 2 seconds
+
