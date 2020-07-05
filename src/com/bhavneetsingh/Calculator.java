@@ -4,11 +4,30 @@ import java.util.ArrayList;
 
 public class Calculator {
 
+    void ListSlicer(ArrayList<ArrayList<Integer>> list){
+        String date ="08-03-04";
+        int n = list.size()-1;
+        CalCaller(list,date,n);
+
+    }
+
+    ArrayList<Integer> CalCaller(ArrayList<ArrayList<Integer>> list,String date,int n){
+        //int n=2;//recieves default list as year list
+        int partDate = Integer.parseInt(date.split("-")[n]);
+        int[] yearStartToEndIndex = new int[2];
+        yearStartToEndIndex = IndexCal(list.get(n),partDate);//yearIndex Obtained
+        n--;
+        ArrayList<Integer> monthList = new ArrayList<Integer>();//year part over --month part starts
+        monthList = Slicer(list, yearStartToEndIndex,n);
+        return monthList;
+    }
+
+
     int[] IndexCal(ArrayList<Integer> list,int date){//make int
         int[] Output = new int[2];
-        BinSearch BS= new BinSearch();
-        Output[0] = BS.Search_list_start(list,date);
-        Output[1] = BS.Search_list_end(list,Output[0],date);
+        //BinSearch BS= new BinSearch();
+        //Output[0] = BS.searchListStart(list,date);
+        //Output[1] = BS.searchListEnd(list,Output[0],date);
         return Output;
         //System.out.println(startYearIndex);
     }
@@ -29,28 +48,13 @@ public class Calculator {
             n--;
         }
     }
-    ArrayList<Integer> CalCaller(ArrayList<ArrayList<Integer>> list,String date,int n){
-        //int n=2;//recieves default list as year list
-        int partDate = Integer.parseInt(date.split("-")[n]);
-        int[] yearStartToEndIndex = new int[2];
-        yearStartToEndIndex = IndexCal(list.get(n),partDate);//yearIndex Obtained
-        n--;
-        ArrayList<Integer> monthList = new ArrayList<Integer>();//year part over --month part starts
-        monthList = Slicer(list, yearStartToEndIndex,n);
-        return monthList;
-    }
-    void ListSlicer(ArrayList<ArrayList<Integer>> list){
-        String date ="08-03-04";
-        int n = list.size()-1;
-        CalCaller(list,date,n);
 
-    }
-    int Splitter(ArrayList<Integer> list,String date,int low,int high,int n){//make int
-        int partDate = Integer.parseInt(date.split("-")[n]);
-        return partDate;
-        //System.out.println(startYearIndex);
-        //alpha
-    }
+    // int Splitter(ArrayList<Integer> list,String date,int low,int high,int n){//make int
+    //     int partDate = Integer.parseInt(date.split("-")[n]);
+    //     return partDate;
+    //     //System.out.println(startYearIndex);
+    //     //alpha
+    // }
 
 
     void Printer(ArrayList<Integer> list){ //Printer-Stub

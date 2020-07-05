@@ -1,8 +1,8 @@
 package com.bhavneetsingh;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
@@ -24,6 +24,7 @@ public class LogReadFilter {
             return null;
         }
     }
+
     public ArrayList<ArrayList<Integer>> filter(ArrayList<String> logList){//Step2-FilterData
         ArrayList<Integer> day = new ArrayList<Integer>();
         ArrayList<Integer> month = new ArrayList<Integer>();
@@ -44,21 +45,16 @@ public class LogReadFilter {
         return date;
     }
 
-
     void Printer(ArrayList<ArrayList<Integer>> date){
 
-        // for(ArrayList<Integer> list:date){
-        // 	for(int sublist:list){
-        // 		System.out.println(sublist);//sublist
-        // 	}
-        // }
-
-        for(int i = 0; i < date.size(); i++){
-            for(int j = 0; j < date.get(i).size(); j++){
-                System.out.println(date.get(i).get(j));//
-            }
-
+        int i=2;
+        for(int j = 0; j < date.get(i).size(); j++){
+            System.out.println(date.get(i).get(j));//
         }
 
     }
+
 }
+
+
+

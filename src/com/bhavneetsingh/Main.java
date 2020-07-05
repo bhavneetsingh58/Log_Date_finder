@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         LogReadFilter LRF = new LogReadFilter();
-        BinSearch BS = new BinSearch();
+        //BinSearch BS = new BinSearch();
         Calculator CL = new Calculator();
         try {
             //one.Printer();
