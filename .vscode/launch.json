@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Log_Date_finder_3c0481a3>",
+            "request": "launch",
+            "mainClass": "com.bhavneetsingh.Main",
+            "projectName": "Log_Date_finder_3c0481a3"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-input<Log_Date_finder_3c0481a3>",
+            "request": "launch",
+            "mainClass": "com.bhavneetsingh.input",
+            "projectName": "Log_Date_finder_3c0481a3",
+            "args": "bhavneet singh"
+        }
+    ]
+}

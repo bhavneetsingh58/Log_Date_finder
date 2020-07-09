@@ -63,7 +63,15 @@
 //         return monthList;
 
 
+// public class input {
+//     void validate(String date){
+//         int partDate = Integer.parseInt(date.split("-")[0]);
+//         if(0< partDate  && partDate>30){
+//             System.out.println("True");
+//         }else{System.out.println("false");}
 
+//     }
+    
 
 
 

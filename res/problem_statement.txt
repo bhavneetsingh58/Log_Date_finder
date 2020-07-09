@@ -18,7 +18,7 @@ considering sequential data
 or traversing through a loop to get date for 1st attempt
 traverering year that month than day maybe in op2
 and then diving files and trying to reach the right record
-by using divide/2 fashion
+by using divide/2 fashion(bin search)
 }
 ]
 
