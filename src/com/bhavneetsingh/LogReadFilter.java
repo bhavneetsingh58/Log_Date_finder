@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class LogReadFilter {
     ArrayList<String> readLogFile() throws FileNotFoundException {//Step1-ReadFile
         try{
-            final FileInputStream fstream = new FileInputStream("assets/LogFile-000006.log");
+            final FileInputStream fstream = new FileInputStream("res/LogFile-000006.log");
             final BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
             ArrayList<String> logData = new ArrayList<String>();
             String line;

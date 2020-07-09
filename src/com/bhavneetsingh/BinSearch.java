@@ -17,25 +17,25 @@ public class BinSearch {
     Integer searchList(ArrayList<Integer> list,int date, int low, int high,boolean startEnd) {
         int mid;        
         int current;
-        // int highTemp = high;
-        // int lowTemp = low;
+        int lowTemp = low;
+        int highTemp = high;
         while(low <= high){
             mid = (low+high)/2;
             current =list.get(mid);
             if(date == current){ 
                 if (startEnd){
-                    while((list.get(mid)).equals((list.get(mid-1)))){//insert &&(if(highTemp>=mid))
+                    while(((list.get(mid)).equals(list.get(mid-1)))){//insert &&(if(highTemp>=mid))
                         //System.out.println(list.get(PrevOut));
                         mid--;
                     }
-                return mid+1;
+                if(lowTemp>mid){return lowTemp;}else{return mid+1;}   
                 }
                 else{
-                    while((list.get(mid)).equals((list.get(mid+1)))){
+                    while(((list.get(mid)).equals(list.get(mid+1)))){
                         //System.out.println(list.get(PrevOut));
                         mid++;
                     }
-                return mid+1;
+                if(highTemp<=mid){return highTemp;}else{return mid+1;}   
                 }
             }
             else if(current > date){high = mid-1;}
