@@ -23,7 +23,7 @@
             "request": "launch",
             "mainClass": "com.bhavneetsingh.input",
             "projectName": "Log_Date_finder_3c0481a3",
-            "args": "bhavneet singh"
+            "args": " -f 1998-08-30 -t 2020-09-09 -i C:/Users/bhavn/OneDrive/Documents/Programs/eclipse-workspace/Log_Date_finder/res/LogFile-000006.log"
         }
     ]
 }
