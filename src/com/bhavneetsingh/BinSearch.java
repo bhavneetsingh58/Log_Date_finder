@@ -43,7 +43,7 @@ public class BinSearch {
         }
         return null;
     }
-
+    
     // public static void main(String[] args) {
     //     ArrayList<Integer> list = new ArrayList<Integer>();
     //     list.add(1);
