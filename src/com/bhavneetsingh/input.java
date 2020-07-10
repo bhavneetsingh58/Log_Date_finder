@@ -2,6 +2,8 @@ package com.bhavneetsingh;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import org.apache.commons.cli.*;
+
 import java.io.File;
 import java.text.ParseException;
 
@@ -45,6 +47,25 @@ public class input {
         }catch(Exception e){
             e.printStackTrace();
         }
+
+        CommandLineParser parser = new DefaultParser();
+        Options options = new Options();
+        options.addOption("f",true,"Start Date");
+        options.addOption("t",true,"last date");
+        options.addOption("i",true,"logFile Loc");
+        try {
+            CommandLine commandLine = parser.parse(options, args);
+            System.out.println(commandLine.getOptionValue("f"));
+            System.out.println(commandLine.getOptionValue("t"));
+            System.out.println(commandLine.getOptionValue("i"));
+        } catch (org.apache.commons.cli.ParseException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
     }
     
 }

@@ -4,7 +4,9 @@ create test stub file
 Example logline:2020-01-31T20:12:38.1234Z,Some Field,Other Field, And so on, Till new line,...n
 LogExtractor.exe -f "From Time" -t "To Time" -i "Log file directory location"
 
+LogExtractor.exe -f "From Time" -t "To Time" -i "Log file directory location"
 
+All time formats will be "ISO 8601" format.
 
 //run python script from cmd
 //accept time in iso 8601 format
