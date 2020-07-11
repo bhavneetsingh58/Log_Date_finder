@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="Log_Date_finder:jar">
+  <artifact type="jar" name="Log_Date_finder.jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Log_Date_finder_jar</output-path>
     <root id="archive" name="Log_Date_finder.jar">
       <element id="module-output" name="Log_Date_finder" />

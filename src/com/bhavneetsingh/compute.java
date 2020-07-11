@@ -28,7 +28,7 @@ public class compute {
         return Output;
     }
 
-    void mainComputeModuleCaller(String startDate,String endDate,ArrayList<ArrayList<Integer>> list,ArrayList<String> logData){
+    ArrayList<String> mainComputeModuleCaller(String startDate,String endDate,ArrayList<ArrayList<Integer>> list,ArrayList<String> logData){
         int[] startIndex = new int[2];
         int[] endIndex = new int[2];
         startIndex = mainComputeModule(startDate, list);
@@ -41,6 +41,8 @@ public class compute {
         for (i=start;i<=end;i++){
              System.out.println(logData.get(i));
         }
+        ArrayList<String> subList = new ArrayList<String>(logData.subList(start,end));
+        return subList;
     }
     
 }
