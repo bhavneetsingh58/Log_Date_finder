@@ -7,10 +7,11 @@ public class compute {
     int[] mainComputeModule(String date,ArrayList<ArrayList<Integer>>list){
         BinSearch BS = new BinSearch();
         int[] Output = new int[2];
+        int listSize = ((list.size())-1);
         int startYear = Integer.parseInt(date.split("-")[2]);
-        int startYearIndex = BS.searchListStart(list.get(2),startYear,0,(list.size()-1));
+        int startYearIndex = BS.searchListStart(list.get(2),startYear,0,listSize);
         //System.out.println(startYearIndex);
-        int endYearIndex = BS.searchListEnd(list.get(2),startYear,startYearIndex,(list.size()-1));
+        int endYearIndex = BS.searchListEnd(list.get(2),startYear,startYearIndex,listSize);
         //System.out.println(endYearIndex);
         int startMonth = Integer.parseInt(date.split("-")[1]);
         int startMonthIndex =BS.searchListStart(list.get(1),startMonth,startYearIndex,endYearIndex);
@@ -33,10 +34,11 @@ public class compute {
         startIndex = mainComputeModule(startDate, list);
         endIndex = mainComputeModule(endDate, list);
         int i;
-        for (i=startIndex[0];i<endIndex[1];i++){
+        int start = startIndex[0];
+        int end = endIndex[1];
+        for (i=start;i<=end;i++){
             System.out.println(logData.get(i));
         }
-        
     }
     
 }

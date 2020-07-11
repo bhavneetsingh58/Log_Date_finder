@@ -25,16 +25,14 @@ public class Main {
             CP.mainComputeModuleCaller(
                 (commandLine.getOptionValue("f")),
                 (commandLine.getOptionValue("t")),
-                LRF.filter(logFileData),
+                (LRF.filter(logFileData)),
                 logFileData
              );
-
         } catch (org.apache.commons.cli.ParseException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    
     }
 }
 
