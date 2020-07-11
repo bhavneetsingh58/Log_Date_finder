@@ -2,12 +2,14 @@ package com.bhavneetsingh;
 
 import java.util.ArrayList;
 
+
 public class BinSearch {
 
     Integer searchListStart(ArrayList<Integer> list,int date, int low, int high){
         boolean startEnd = true;
         return searchList(list,date,low,high,startEnd);
     }
+
 
     Integer searchListEnd(ArrayList<Integer> list,int date, int low, int high){
         boolean startEnd = false;
@@ -43,24 +45,5 @@ public class BinSearch {
         }
         return null;
     }
-    
-    // public static void main(String[] args) {
-    //     ArrayList<Integer> list = new ArrayList<Integer>();
-    //     list.add(1);
-    //     list.add(2);
-    //     list.add(4);
-    //     list.add(4);
-    //     list.add(4);
-    //     list.add(9);
-    //     list.add(9);
-    //     list.add(11);
-        
-    //     int date =  4;
-
-    //     BinSearch BS = new BinSearch();
-    //     System.out.println(BS.searchListStart(list,date,3,7));
-    //     //System.out.println(BS.searchListEnd(list,date,0,7));
-        
-    // }
 }
 

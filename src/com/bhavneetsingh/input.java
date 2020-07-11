@@ -1,12 +1,12 @@
 package com.bhavneetsingh;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.util.Date;
 import java.io.File;
 import java.text.ParseException;
 
 public class input {
-   
+
     public boolean validateJavaDate(String strDate)
     {
      if (strDate.trim().equals(""))

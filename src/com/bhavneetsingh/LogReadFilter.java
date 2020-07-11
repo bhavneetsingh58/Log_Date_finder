@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class LogReadFilter {
+
     ArrayList<String> readLogFile(String fileLoc) throws FileNotFoundException {//Step1-ReadFile
         try{
             final FileInputStream fstream = new FileInputStream(fileLoc);//"res/LogFile-000006.log"

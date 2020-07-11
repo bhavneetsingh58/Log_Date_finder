@@ -18,13 +18,5 @@
             "projectName": "Log_Date_finder_3c0481a3",
             "args": " -f 16-09-25 -t 17-10-26 -i res/LogFile-000006.log"
         },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-input<Log_Date_finder_3c0481a3>",
-            "request": "launch",
-            "mainClass": "com.bhavneetsingh.input",
-            "projectName": "Log_Date_finder_3c0481a3",
-            "args": " -f 1998-08-30 -t 2020-09-09 -i C:/Users/bhavn/OneDrive/Documents/Programs/eclipse-workspace/Log_Date_finder/res/LogFile-000006.log"
-        }
     ]
 }
