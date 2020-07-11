@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "com.bhavneetsingh.Main",
             "projectName": "Log_Date_finder_3c0481a3",
-            "args": " -f 2016-09-25 -t 2017-10-26 -i res/LogFile-000006.log"
+            "args": " -f 16-09-25 -t 17-10-26 -i res/LogFile-000006.log"
         },
         {
             "type": "java",

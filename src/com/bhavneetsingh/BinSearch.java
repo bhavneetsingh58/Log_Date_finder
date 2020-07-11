@@ -28,14 +28,14 @@ public class BinSearch {
                         //System.out.println(list.get(PrevOut));
                         mid--;
                     }
-                if(lowTemp>mid){return lowTemp;}else{return mid+1;}   
+                if(lowTemp>mid){return lowTemp;}else{return mid;}   
                 }
                 else{
                     while(((list.get(mid)).equals(list.get(mid+1)))){
                         //System.out.println(list.get(PrevOut));
                         mid++;
                     }
-                if(highTemp<=mid){return highTemp;}else{return mid+1;}   
+                if(highTemp<=mid){return highTemp;}else{return mid;}   
                 }
             }
             else if(current > date){high = mid-1;}

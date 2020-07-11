@@ -22,12 +22,10 @@ public class Main {
             one.validateJavaDate(commandLine.getOptionValue("t"));
             one.checkFile(commandLine.getOptionValue("i"));
             logFileData = LRF.readLogFile(commandLine.getOptionValue("i"));
-            CP.mainComputeModuleCaller(
-                (commandLine.getOptionValue("f")),
-                (commandLine.getOptionValue("t")),
-                (LRF.filter(logFileData)),
-                logFileData
-             );
+            String startDate = commandLine.getOptionValue("f");
+            String endDate = commandLine.getOptionValue("t");
+            //CP.mainComputeModule("16-09-25",(LRF.filter(LRF.readLogFile("res/LogFile-000006.log"))));
+            CP.mainComputeModuleCaller((startDate),(endDate),(LRF.filter(logFileData)),logFileData);
         } catch (org.apache.commons.cli.ParseException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {

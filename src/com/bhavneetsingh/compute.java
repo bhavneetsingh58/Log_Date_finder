@@ -7,18 +7,18 @@ public class compute {
     int[] mainComputeModule(String date,ArrayList<ArrayList<Integer>>list){
         BinSearch BS = new BinSearch();
         int[] Output = new int[2];
-        int listSize = ((list.size())-1);
-        int startYear = Integer.parseInt(date.split("-")[2]);
-        int startYearIndex = BS.searchListStart(list.get(2),startYear,0,listSize);
+        //int listSize = ((list.get(0).size())-1);
+        int startYear = Integer.parseInt(date.split("-")[0]);
+        int startYearIndex = BS.searchListStart(list.get(2),startYear,0,99);
         //System.out.println(startYearIndex);
-        int endYearIndex = BS.searchListEnd(list.get(2),startYear,startYearIndex,listSize);
+        int endYearIndex = BS.searchListEnd(list.get(2),startYear,startYearIndex,99);
         //System.out.println(endYearIndex);
         int startMonth = Integer.parseInt(date.split("-")[1]);
         int startMonthIndex =BS.searchListStart(list.get(1),startMonth,startYearIndex,endYearIndex);
         //System.out.println(startMonthIndex);
         int endMonthIndex =BS.searchListEnd(list.get(1),startMonth,startMonthIndex,endYearIndex);
         //System.out.println(endMonthIndex);
-        int startDay = Integer.parseInt(date.split("-")[0]);
+        int startDay = Integer.parseInt(date.split("-")[2]);
         int startDayIndex =BS.searchListStart(list.get(0),startDay,startMonthIndex,endMonthIndex);
         Output[0] = startDayIndex;
         //System.out.println(startDayIndex);
@@ -32,12 +32,14 @@ public class compute {
         int[] startIndex = new int[2];
         int[] endIndex = new int[2];
         startIndex = mainComputeModule(startDate, list);
+        System.out.println(startIndex);
         endIndex = mainComputeModule(endDate, list);
+        System.out.println(endIndex);
         int i;
         int start = startIndex[0];
         int end = endIndex[1];
         for (i=start;i<=end;i++){
-            System.out.println(logData.get(i));
+             System.out.println(logData.get(i));
         }
     }
     

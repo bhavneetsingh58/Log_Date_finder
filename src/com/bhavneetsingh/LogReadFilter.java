@@ -45,15 +45,6 @@ public class LogReadFilter {
         return date;
     }
 
-    void Printer(ArrayList<ArrayList<Integer>> date){
-
-        int i=2;
-        for(int j = 0; j < date.get(i).size(); j++){
-            System.out.println(date.get(i).get(j));//
-        }
-
-    }
-
 }
 
 
