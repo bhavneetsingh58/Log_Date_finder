@@ -15,7 +15,8 @@
             "name": "Debug (Launch)-Main<Log_Date_finder_3c0481a3>",
             "request": "launch",
             "mainClass": "com.bhavneetsingh.Main",
-            "projectName": "Log_Date_finder_3c0481a3"
+            "projectName": "Log_Date_finder_3c0481a3",
+            "args": " -f 1998-08-30 -t 2020-09-09 -i C:/Users/bhavn/OneDrive/Documents/Programs/eclipse-workspace/Log_Date_finder/res/LogFile-000006.log"
         },
         {
             "type": "java",
