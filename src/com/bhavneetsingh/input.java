@@ -15,8 +15,7 @@ public class input {
      {
          SimpleDateFormat sdfrmt = new SimpleDateFormat("yyyy-MM-dd");
          sdfrmt.setLenient(false);
-         try{Date javaDate = sdfrmt.parse(strDate); 
-             //System.out.println(strDate+" is valid date format");
+         try{sdfrmt.parse(strDate); 
          }catch (ParseException e){
              System.out.println(strDate+" is Invalid Date format");
              return false;
