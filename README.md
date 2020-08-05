@@ -40,18 +40,5 @@ These 3 Steps are performed for Start date and End date
 
 And then using the index number of  first occurrence of start date
 And Last occurrence of end Date The Output is printed
-Steps to Execute/General Instructions:-
 
-“exe&jar.zip ”contains
-.exe , .jar  files with testLines to execute them
-It also contains a test file within the subfolder res
-
-.java files have been pasted to a folder called "Java files"
-
-This folder does not contain the whole project
-
-The whole project can be found under “Full Project.zip”  attached
-
-It can Alternatively Also be forked/downloaded from my GitHub Repo
-https://github.com/bhavneetsingh58/Log_Date_finder  
 
